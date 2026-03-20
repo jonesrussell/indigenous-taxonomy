@@ -1,0 +1,14 @@
+{
+  "name": "jonesrussell/indigenous-taxonomy",
+  "description": "Indigenous content taxonomy — categories, regions, dialect codes",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "IndigenousTaxonomy\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.4"
+  }
+}

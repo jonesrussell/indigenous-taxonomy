@@ -1,0 +1,39 @@
+version: 1
+
+regions:
+  - slug: canada
+    name: Canada
+    children:
+      - slug: canada:british-columbia
+        name: British Columbia
+      - slug: canada:alberta
+        name: Alberta
+      - slug: canada:saskatchewan
+        name: Saskatchewan
+      - slug: canada:manitoba
+        name: Manitoba
+        children:
+          - slug: canada:manitoba:southern
+            name: Southern Manitoba
+      - slug: canada:ontario
+        name: Ontario
+        children:
+          - slug: canada:ontario:northern
+            name: Northern Ontario
+          - slug: canada:ontario:north-shore-huron
+            name: North Shore of Lake Huron
+          - slug: canada:ontario:southern
+            name: Southern Ontario
+      - slug: canada:quebec
+        name: Quebec
+      - slug: canada:atlantic
+        name: Atlantic Canada
+      - slug: canada:north
+        name: Northern Canada
+        children:
+          - slug: canada:north:yukon
+            name: Yukon
+          - slug: canada:north:nwt
+            name: Northwest Territories
+          - slug: canada:north:nunavut
+            name: Nunavut

@@ -1,0 +1,52 @@
+version: 1
+
+categories:
+  - slug: culture
+    name: Culture
+    description: Cultural practices, ceremonies, traditions, art, music
+    nc_routing: true
+
+  - slug: language
+    name: Language
+    description: Language revitalization, dictionaries, dialects, immersion programs
+    nc_routing: true
+
+  - slug: land-rights
+    name: Land Rights
+    description: Treaty rights, land claims, territorial sovereignty
+    nc_routing: true
+
+  - slug: environment
+    name: Environment
+    description: Environmental stewardship, traditional ecological knowledge, climate
+    nc_routing: true
+
+  - slug: sovereignty
+    name: Sovereignty
+    description: Self-governance, nation-to-nation relations, self-determination
+    nc_routing: true
+
+  - slug: education
+    name: Education
+    description: Indigenous education, curriculum, schools, knowledge transmission
+    nc_routing: true
+
+  - slug: health
+    name: Health
+    description: Indigenous health, traditional medicine, wellness, mental health
+    nc_routing: true
+
+  - slug: justice
+    name: Justice
+    description: Legal rights, MMIWG, policing, incarceration, restorative justice
+    nc_routing: true
+
+  - slug: history
+    name: History
+    description: Historical events, residential schools, treaties, reconciliation
+    nc_routing: true
+
+  - slug: community
+    name: Community
+    description: Community news, events, leadership, services, economic development
+    nc_routing: true

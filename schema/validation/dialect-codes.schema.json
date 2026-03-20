@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "language_families"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "type": "integer", "minimum": 1 },
+    "language_families": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["slug", "name", "dialects"],
+        "additionalProperties": false,
+        "properties": {
+          "slug": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "name": { "type": "string", "minLength": 1 },
+          "dialects": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["code", "name", "display_name", "iso_639_3", "regions"],
+              "additionalProperties": false,
+              "properties": {
+                "code": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+                "name": { "type": "string", "minLength": 1 },
+                "display_name": { "type": "string", "minLength": 1 },
+                "iso_639_3": { "type": "string", "pattern": "^[a-z]{3}$" },
+                "regions": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

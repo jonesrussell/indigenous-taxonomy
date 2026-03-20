@@ -1,0 +1,12 @@
+[project]
+name = "indigenous-taxonomy"
+version = "1.0.0"
+description = "Indigenous content taxonomy — categories, regions, dialect codes"
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]

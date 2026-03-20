@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  publish-python:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build package
+        run: |
+          pip install build
+          cd generated/python && python -m build
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: generated/python/dist/
+
+  publish-go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Go module published via git tag
+        run: echo "Go module available at github.com/jonesrussell/indigenous-taxonomy/generated/go/taxonomy@${GITHUB_REF_NAME}"

@@ -1,0 +1,24 @@
+version: '3'
+
+tasks:
+  generate:
+    desc: Regenerate all packages from YAML
+    cmds:
+      - python scripts/generate.py
+
+  validate:
+    desc: Validate YAML against JSON Schema
+    cmds:
+      - pytest tests/test_schema_valid.py tests/test_slugs_unique.py -v
+
+  test:
+    desc: Run all tests
+    cmds:
+      - pytest tests/ -v
+
+  release:
+    desc: Tag and push (CI publishes packages)
+    cmds:
+      - task: test
+      - task: generate
+      - echo "Ready to tag. Run 'git tag v<X.Y.Z> && git push --tags'"

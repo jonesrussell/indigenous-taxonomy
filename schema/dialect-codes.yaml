@@ -1,0 +1,79 @@
+version: 1
+
+language_families:
+  - slug: algonquian
+    name: Algonquian
+    dialects:
+      - code: oji-east
+        name: Nishnaabemwin
+        display_name: Eastern Ojibwe
+        iso_639_3: ojg
+        regions:
+          - canada:ontario:north-shore-huron
+          - canada:ontario:southern
+      - code: oji-northwest
+        name: Anishinaabemowin
+        display_name: Northwestern Ojibwe
+        iso_639_3: ojb
+        regions:
+          - canada:ontario:northern
+      - code: oji-plains
+        name: "Nakaw\u0113mowin"
+        display_name: Saulteaux / Plains Ojibwe
+        iso_639_3: ojs
+        regions:
+          - canada:manitoba:southern
+          - canada:saskatchewan
+      - code: oji-ottawa
+        name: Odaawaa
+        display_name: Ottawa / Odawa
+        iso_639_3: otw
+        regions:
+          - canada:ontario:southern
+      - code: cree-plains
+        name: "n\u0113hiyaw\u0113win"
+        display_name: Plains Cree
+        iso_639_3: crk
+        regions:
+          - canada:saskatchewan
+          - canada:alberta
+      - code: cree-swampy
+        name: "Inin\u012Bmowin"
+        display_name: Swampy Cree
+        iso_639_3: csw
+        regions:
+          - canada:manitoba
+          - canada:ontario:northern
+      - code: innu
+        name: Innu-aimun
+        display_name: Innu
+        iso_639_3: moe
+        regions:
+          - canada:quebec
+          - canada:atlantic
+  - slug: eskimo-aleut
+    name: Eskimo-Aleut
+    dialects:
+      - code: inuktitut
+        name: "\u1403\u14C4\u1483\u144E\u1450\u1466"
+        display_name: Inuktitut
+        iso_639_3: iku
+        regions:
+          - canada:north:nunavut
+          - canada:quebec
+      - code: inuvialuktun
+        name: Inuvialuktun
+        display_name: Inuvialuktun
+        iso_639_3: ikt
+        regions:
+          - canada:north:nwt
+  - slug: iroquoian
+    name: Iroquoian
+    dialects:
+      - code: mohawk
+        name: "Kanien\u2019k\u00E9ha"
+        display_name: Mohawk
+        iso_639_3: moh
+        regions:
+          - canada:ontario:southern
+          - canada:quebec
