@@ -82,8 +82,29 @@ def flatten_regions(regions: list[dict], out: list[dict] | None = None) -> list[
     return out
 
 
+def build_parent_map(regions: list[dict]) -> dict[str, str]:
+    """Walk the children: tree and return a flat dict mapping each child slug to its direct parent slug.
+
+    Top-level entries (e.g. 'canada') do NOT appear as keys so that ParentRegion
+    returns (false, "") for them.  Output is sorted for deterministic code emission.
+    """
+    result: dict[str, str] = {}
+
+    def _walk(nodes: list[dict], parent_slug: str | None) -> None:
+        for node in nodes:
+            slug = node["slug"]
+            if parent_slug is not None:
+                result[slug] = parent_slug
+            if "children" in node:
+                _walk(node["children"], slug)
+
+    _walk(regions, None)
+    return dict(sorted(result.items()))
+
+
 def gen_go_regions(regions: list[dict]) -> str:
     flat = flatten_regions(regions)
+    parent_map = build_parent_map(regions)
     lines = [HEADER_GO, "package taxonomy\n", "type Region string\n", "const ("]
     for r in flat:
         lines.append(f'\tRegion{to_pascal(r["slug"])} Region = "{r["slug"]}"')
@@ -96,6 +117,16 @@ def gen_go_regions(regions: list[dict]) -> str:
     lines.append('\t\tif string(r) == s { return true }')
     lines.append("\t}")
     lines.append("\treturn false")
+    lines.append("}\n")
+    lines.append("var regionParents = map[Region]Region{")
+    for child, parent in parent_map.items():
+        lines.append(f'\tRegion{to_pascal(child)}: Region{to_pascal(parent)},')
+    lines.append("}\n")
+    lines.append("// ParentRegion returns the direct parent of child in the region hierarchy.")
+    lines.append("// Top-level regions (e.g. RegionCanada) return (\"\", false).")
+    lines.append("func ParentRegion(child Region) (Region, bool) {")
+    lines.append("\tp, ok := regionParents[child]")
+    lines.append("\treturn p, ok")
     lines.append("}")
     return "\n".join(lines) + "\n"
 

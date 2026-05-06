@@ -50,3 +50,43 @@ func IsValidRegion(s string) bool {
 	}
 	return false
 }
+
+var regionParents = map[Region]Region{
+	RegionCanadaAlberta:                          RegionCanada,
+	RegionCanadaAlbertaCalgary:                   RegionCanadaAlberta,
+	RegionCanadaAlbertaSiksikaFn:                 RegionCanadaAlberta,
+	RegionCanadaAtlantic:                         RegionCanada,
+	RegionCanadaAtlanticMembertouFn:              RegionCanadaAtlantic,
+	RegionCanadaBritishColumbia:                  RegionCanada,
+	RegionCanadaBritishColumbiaMusqueamFn:        RegionCanadaBritishColumbia,
+	RegionCanadaBritishColumbiaVancouver:         RegionCanadaBritishColumbia,
+	RegionCanadaManitoba:                         RegionCanada,
+	RegionCanadaManitobaSagkeengFn:               RegionCanadaManitoba,
+	RegionCanadaManitobaSouthern:                 RegionCanadaManitoba,
+	RegionCanadaManitobaWinnipeg:                 RegionCanadaManitoba,
+	RegionCanadaNorth:                            RegionCanada,
+	RegionCanadaNorthKluaneFn:                    RegionCanadaNorth,
+	RegionCanadaNorthNunavut:                     RegionCanadaNorth,
+	RegionCanadaNorthNwt:                         RegionCanadaNorth,
+	RegionCanadaNorthYukon:                       RegionCanadaNorth,
+	RegionCanadaOntario:                          RegionCanada,
+	RegionCanadaOntarioFortWilliamFn:             RegionCanadaOntario,
+	RegionCanadaOntarioMississaugasOfTheCreditFn: RegionCanadaOntario,
+	RegionCanadaOntarioNorthShoreHuron:           RegionCanadaOntario,
+	RegionCanadaOntarioNorthern:                  RegionCanadaOntario,
+	RegionCanadaOntarioOttawa:                    RegionCanadaOntario,
+	RegionCanadaOntarioSouthern:                  RegionCanadaOntario,
+	RegionCanadaOntarioToronto:                   RegionCanadaOntario,
+	RegionCanadaQuebec:                           RegionCanada,
+	RegionCanadaQuebecKahnawakeFn:                RegionCanadaQuebec,
+	RegionCanadaSaskatchewan:                     RegionCanada,
+	RegionCanadaSaskatchewanBeardyOkimasisFn:     RegionCanadaSaskatchewan,
+	RegionCanadaSaskatchewanSaskatoon:            RegionCanadaSaskatchewan,
+}
+
+// ParentRegion returns the direct parent of child in the region hierarchy.
+// Top-level regions (e.g. RegionCanada) return ("", false).
+func ParentRegion(child Region) (Region, bool) {
+	p, ok := regionParents[child]
+	return p, ok
+}
