@@ -100,6 +100,29 @@ def gen_go_regions(regions: list[dict]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def gen_go_treaties(treaties: list[dict]) -> str:
+    # Sort by slug for deterministic output (treaty:1, treaty:10, treaty:11, treaty:2 … is lex order,
+    # so sort numerically by the integer suffix instead).
+    sorted_treaties = sorted(treaties, key=lambda t: int(t["slug"].split(":")[1]))
+    lines = [HEADER_GO, "package taxonomy\n", "type Treaty string\n", "const ("]
+    for t in sorted_treaties:
+        num = t["slug"].split(":")[1]
+        lines.append(f'\tTreatyArea{num} Treaty = "{t["slug"]}"')
+    lines.append(")\n")
+    lines.append("var AllTreaties = []Treaty{")
+    lines.append("\t" + ", ".join(f'TreatyArea{t["slug"].split(":")[1]}' for t in sorted_treaties) + ",")
+    lines.append("}\n")
+    lines.append("func IsValidTreaty(s string) bool {")
+    lines.append("\tvalidTreaties := map[Treaty]struct{}{}")
+    lines.append("\tfor _, t := range AllTreaties {")
+    lines.append("\t\tvalidTreaties[t] = struct{}{}")
+    lines.append("\t}")
+    lines.append("\t_, ok := validTreaties[Treaty(s)]")
+    lines.append("\treturn ok")
+    lines.append("}")
+    return "\n".join(lines) + "\n"
+
+
 def gen_go_dialects(families: list[dict]) -> str:
     lines = [HEADER_GO, "package taxonomy\n"]
     lines.append("type DialectCode struct {")
@@ -275,6 +298,7 @@ def main() -> None:
     cats_data = load_yaml("categories")
     regions_data = load_yaml("regions")
     dialects_data = load_yaml("dialect-codes")
+    treaties_data = load_yaml("treaties")
 
     sha = schema_hash()
     version = cats_data.get("version", 1)
@@ -285,6 +309,7 @@ def main() -> None:
     (GEN_GO / "categories.go").write_text(gen_go_categories(cats_data["categories"]))
     (GEN_GO / "regions.go").write_text(gen_go_regions(regions_data["regions"]))
     (GEN_GO / "dialects.go").write_text(gen_go_dialects(dialects_data["language_families"]))
+    (GEN_GO / "treaties.go").write_text(gen_go_treaties(treaties_data["treaties"]))
     (GEN_GO / "version.go").write_text(gen_go_version(version_str, sha))
 
     # PHP

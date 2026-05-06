@@ -9,5 +9,5 @@ namespace IndigenousTaxonomy;
 final class TaxonomyVersion
 {
     public const VERSION = '1.0.0';
-    public const SCHEMA_HASH = 'd462b1c801996a17';
+    public const SCHEMA_HASH = '1c0bd129be4654b8';
 }

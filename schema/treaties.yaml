@@ -1,0 +1,104 @@
+version: 1
+
+# Numbered Treaties (Treaties 1–11), Canada
+# Source: Crown-Indigenous Relations and Northern Affairs Canada
+# member_regions are informational and map to slugs in regions.yaml.
+# partial: true indicates the list of member regions is not exhaustive.
+
+treaties:
+  - slug: "treaty:1"
+    name: "Treaty 1 (Stone Fort Treaty)"
+    year: 1871
+    member_regions:
+      - "canada:manitoba"
+    partial: true
+    description: "Areas of southern Manitoba covered by Treaty 1 of 1871."
+
+  - slug: "treaty:2"
+    name: "Treaty 2 (Manitoba Post Treaty)"
+    year: 1871
+    member_regions:
+      - "canada:manitoba"
+    partial: true
+    description: "Areas of southern Manitoba covered by Treaty 2 of 1871."
+
+  - slug: "treaty:3"
+    name: "Treaty 3 (North-West Angle Treaty)"
+    year: 1873
+    member_regions:
+      - "canada:ontario"
+      - "canada:manitoba"
+    partial: true
+    description: "Northwestern Ontario and a portion of southeastern Manitoba covered by Treaty 3 of 1873."
+
+  - slug: "treaty:4"
+    name: "Treaty 4 (Qu'Appelle Treaty)"
+    year: 1874
+    member_regions:
+      - "canada:saskatchewan"
+      - "canada:manitoba"
+    partial: true
+    description: "Southern Saskatchewan and a small part of Manitoba covered by Treaty 4 of 1874."
+
+  - slug: "treaty:5"
+    name: "Treaty 5 (Winnipeg Treaty)"
+    year: 1875
+    member_regions:
+      - "canada:manitoba"
+      - "canada:saskatchewan"
+    partial: true
+    description: "Northern Manitoba and parts of Saskatchewan covered by Treaty 5 of 1875."
+
+  - slug: "treaty:6"
+    name: "Treaty 6"
+    year: 1876
+    member_regions:
+      - "canada:alberta"
+      - "canada:saskatchewan"
+    partial: true
+    description: "Central Alberta and central Saskatchewan covered by Treaty 6 of 1876."
+
+  - slug: "treaty:7"
+    name: "Treaty 7"
+    year: 1877
+    member_regions:
+      - "canada:alberta"
+    partial: true
+    description: "Southern Alberta covered by Treaty 7 of 1877."
+
+  - slug: "treaty:8"
+    name: "Treaty 8"
+    year: 1899
+    member_regions:
+      - "canada:alberta"
+      - "canada:british-columbia"
+      - "canada:saskatchewan"
+      - "canada:north:nwt"
+    partial: true
+    description: "Northern Alberta, northeastern British Columbia, northwestern Saskatchewan, and southern Northwest Territories covered by Treaty 8 of 1899."
+
+  - slug: "treaty:9"
+    name: "Treaty 9 (James Bay Treaty)"
+    year: 1905
+    member_regions:
+      - "canada:ontario"
+    partial: true
+    description: "Northern Ontario covered by Treaty 9 of 1905."
+
+  - slug: "treaty:10"
+    name: "Treaty 10"
+    year: 1906
+    member_regions:
+      - "canada:saskatchewan"
+      - "canada:alberta"
+    partial: true
+    description: "Northern Saskatchewan and a small part of northern Alberta covered by Treaty 10 of 1906."
+
+  - slug: "treaty:11"
+    name: "Treaty 11"
+    year: 1921
+    member_regions:
+      - "canada:north:nwt"
+      - "canada:north:yukon"
+    partial: true
+    description: "Northwest Territories and portions of Yukon covered by Treaty 11 of 1921."
