@@ -2,5 +2,5 @@
 
 package taxonomy
 
-const TaxonomyVersion = "1.0.0"
+const TaxonomyVersion = "1.1.0"
 const SchemaHash = "fccd13564aa9b99a"

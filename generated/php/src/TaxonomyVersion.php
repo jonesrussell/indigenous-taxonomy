@@ -8,6 +8,6 @@ namespace IndigenousTaxonomy;
 
 final class TaxonomyVersion
 {
-    public const VERSION = '1.0.0';
+    public const VERSION = '1.1.0';
     public const SCHEMA_HASH = 'fccd13564aa9b99a';
 }
