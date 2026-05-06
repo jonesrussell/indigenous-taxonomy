@@ -6,15 +6,39 @@ regions:
     children:
       - slug: canada:british-columbia
         name: British Columbia
+        children:
+          - slug: canada:british-columbia:vancouver
+            name: Vancouver
+          - slug: canada:british-columbia:musqueam-fn
+            name: Musqueam Indian Band
+            description: Musqueam First Nation, traditional territory includes Vancouver area (no numbered treaty)
+            partial: true
       - slug: canada:alberta
         name: Alberta
+        children:
+          - slug: canada:alberta:calgary
+            name: Calgary
+          - slug: canada:alberta:siksika-fn
+            name: Siksika Nation
+            description: Siksika Nation, Treaty 7 territory, Blackfoot Confederacy
       - slug: canada:saskatchewan
         name: Saskatchewan
+        children:
+          - slug: canada:saskatchewan:saskatoon
+            name: Saskatoon
+          - slug: canada:saskatchewan:beardy-okimasis-fn
+            name: Beardy's and Okemasis' Cree Nation
+            description: Treaty 6 territory, Saskatchewan
       - slug: canada:manitoba
         name: Manitoba
         children:
           - slug: canada:manitoba:southern
             name: Southern Manitoba
+          - slug: canada:manitoba:winnipeg
+            name: Winnipeg
+          - slug: canada:manitoba:sagkeeng-fn
+            name: Sagkeeng First Nation
+            description: Sagkeeng First Nation (Fort Alexander), Treaty 1 territory, Manitoba
       - slug: canada:ontario
         name: Ontario
         children:
@@ -24,10 +48,31 @@ regions:
             name: North Shore of Lake Huron
           - slug: canada:ontario:southern
             name: Southern Ontario
+          - slug: canada:ontario:toronto
+            name: Toronto
+          - slug: canada:ontario:ottawa
+            name: Ottawa
+          - slug: canada:ontario:mississaugas-of-the-credit-fn
+            name: Mississaugas of the Credit First Nation
+            description: Treaty 3 (Haldimand Tract) and Toronto Purchase territory, Ontario
+          - slug: canada:ontario:fort-william-fn
+            name: Fort William First Nation
+            description: Robinson-Superior Treaty territory, Thunder Bay area, Ontario
+            partial: true
       - slug: canada:quebec
         name: Quebec
+        children:
+          - slug: canada:quebec:kahnawake-fn
+            name: Kahnawake Mohawk Territory
+            description: Kahnawake Mohawk Territory, Quebec (outside numbered treaty system)
+            partial: true
       - slug: canada:atlantic
         name: Atlantic Canada
+        children:
+          - slug: canada:atlantic:membertou-fn
+            name: Membertou First Nation
+            description: Membertou First Nation, Mi'kmaq territory, Cape Breton Island, Nova Scotia
+            partial: true
       - slug: canada:north
         name: Northern Canada
         children:
@@ -37,3 +82,7 @@ regions:
             name: Northwest Territories
           - slug: canada:north:nunavut
             name: Nunavut
+          - slug: canada:north:kluane-fn
+            name: Kluane First Nation
+            description: Kluane First Nation, Yukon, modern treaty (Umbrella Final Agreement)
+            partial: true

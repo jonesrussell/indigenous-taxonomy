@@ -5,15 +5,15 @@ package taxonomy
 type Treaty string
 
 const (
-	TreatyArea1  Treaty = "treaty:1"
-	TreatyArea2  Treaty = "treaty:2"
-	TreatyArea3  Treaty = "treaty:3"
-	TreatyArea4  Treaty = "treaty:4"
-	TreatyArea5  Treaty = "treaty:5"
-	TreatyArea6  Treaty = "treaty:6"
-	TreatyArea7  Treaty = "treaty:7"
-	TreatyArea8  Treaty = "treaty:8"
-	TreatyArea9  Treaty = "treaty:9"
+	TreatyArea1 Treaty = "treaty:1"
+	TreatyArea2 Treaty = "treaty:2"
+	TreatyArea3 Treaty = "treaty:3"
+	TreatyArea4 Treaty = "treaty:4"
+	TreatyArea5 Treaty = "treaty:5"
+	TreatyArea6 Treaty = "treaty:6"
+	TreatyArea7 Treaty = "treaty:7"
+	TreatyArea8 Treaty = "treaty:8"
+	TreatyArea9 Treaty = "treaty:9"
 	TreatyArea10 Treaty = "treaty:10"
 	TreatyArea11 Treaty = "treaty:11"
 )

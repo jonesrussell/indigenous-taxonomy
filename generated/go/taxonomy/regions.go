@@ -5,31 +5,48 @@ package taxonomy
 type Region string
 
 const (
-	RegionCanada Region = "canada"
-	RegionCanadaBritishColumbia Region = "canada:british-columbia"
-	RegionCanadaAlberta Region = "canada:alberta"
-	RegionCanadaSaskatchewan Region = "canada:saskatchewan"
-	RegionCanadaManitoba Region = "canada:manitoba"
-	RegionCanadaManitobaSouthern Region = "canada:manitoba:southern"
-	RegionCanadaOntario Region = "canada:ontario"
-	RegionCanadaOntarioNorthern Region = "canada:ontario:northern"
-	RegionCanadaOntarioNorthShoreHuron Region = "canada:ontario:north-shore-huron"
-	RegionCanadaOntarioSouthern Region = "canada:ontario:southern"
-	RegionCanadaQuebec Region = "canada:quebec"
-	RegionCanadaAtlantic Region = "canada:atlantic"
-	RegionCanadaNorth Region = "canada:north"
-	RegionCanadaNorthYukon Region = "canada:north:yukon"
-	RegionCanadaNorthNwt Region = "canada:north:nwt"
-	RegionCanadaNorthNunavut Region = "canada:north:nunavut"
+	RegionCanada                                 Region = "canada"
+	RegionCanadaBritishColumbia                  Region = "canada:british-columbia"
+	RegionCanadaBritishColumbiaVancouver         Region = "canada:british-columbia:vancouver"
+	RegionCanadaBritishColumbiaMusqueamFn        Region = "canada:british-columbia:musqueam-fn"
+	RegionCanadaAlberta                          Region = "canada:alberta"
+	RegionCanadaAlbertaCalgary                   Region = "canada:alberta:calgary"
+	RegionCanadaAlbertaSiksikaFn                 Region = "canada:alberta:siksika-fn"
+	RegionCanadaSaskatchewan                     Region = "canada:saskatchewan"
+	RegionCanadaSaskatchewanSaskatoon            Region = "canada:saskatchewan:saskatoon"
+	RegionCanadaSaskatchewanBeardyOkimasisFn     Region = "canada:saskatchewan:beardy-okimasis-fn"
+	RegionCanadaManitoba                         Region = "canada:manitoba"
+	RegionCanadaManitobaSouthern                 Region = "canada:manitoba:southern"
+	RegionCanadaManitobaWinnipeg                 Region = "canada:manitoba:winnipeg"
+	RegionCanadaManitobaSagkeengFn               Region = "canada:manitoba:sagkeeng-fn"
+	RegionCanadaOntario                          Region = "canada:ontario"
+	RegionCanadaOntarioNorthern                  Region = "canada:ontario:northern"
+	RegionCanadaOntarioNorthShoreHuron           Region = "canada:ontario:north-shore-huron"
+	RegionCanadaOntarioSouthern                  Region = "canada:ontario:southern"
+	RegionCanadaOntarioToronto                   Region = "canada:ontario:toronto"
+	RegionCanadaOntarioOttawa                    Region = "canada:ontario:ottawa"
+	RegionCanadaOntarioMississaugasOfTheCreditFn Region = "canada:ontario:mississaugas-of-the-credit-fn"
+	RegionCanadaOntarioFortWilliamFn             Region = "canada:ontario:fort-william-fn"
+	RegionCanadaQuebec                           Region = "canada:quebec"
+	RegionCanadaQuebecKahnawakeFn                Region = "canada:quebec:kahnawake-fn"
+	RegionCanadaAtlantic                         Region = "canada:atlantic"
+	RegionCanadaAtlanticMembertouFn              Region = "canada:atlantic:membertou-fn"
+	RegionCanadaNorth                            Region = "canada:north"
+	RegionCanadaNorthYukon                       Region = "canada:north:yukon"
+	RegionCanadaNorthNwt                         Region = "canada:north:nwt"
+	RegionCanadaNorthNunavut                     Region = "canada:north:nunavut"
+	RegionCanadaNorthKluaneFn                    Region = "canada:north:kluane-fn"
 )
 
 var AllRegions = []Region{
-	RegionCanada, RegionCanadaBritishColumbia, RegionCanadaAlberta, RegionCanadaSaskatchewan, RegionCanadaManitoba, RegionCanadaManitobaSouthern, RegionCanadaOntario, RegionCanadaOntarioNorthern, RegionCanadaOntarioNorthShoreHuron, RegionCanadaOntarioSouthern, RegionCanadaQuebec, RegionCanadaAtlantic, RegionCanadaNorth, RegionCanadaNorthYukon, RegionCanadaNorthNwt, RegionCanadaNorthNunavut,
+	RegionCanada, RegionCanadaBritishColumbia, RegionCanadaBritishColumbiaVancouver, RegionCanadaBritishColumbiaMusqueamFn, RegionCanadaAlberta, RegionCanadaAlbertaCalgary, RegionCanadaAlbertaSiksikaFn, RegionCanadaSaskatchewan, RegionCanadaSaskatchewanSaskatoon, RegionCanadaSaskatchewanBeardyOkimasisFn, RegionCanadaManitoba, RegionCanadaManitobaSouthern, RegionCanadaManitobaWinnipeg, RegionCanadaManitobaSagkeengFn, RegionCanadaOntario, RegionCanadaOntarioNorthern, RegionCanadaOntarioNorthShoreHuron, RegionCanadaOntarioSouthern, RegionCanadaOntarioToronto, RegionCanadaOntarioOttawa, RegionCanadaOntarioMississaugasOfTheCreditFn, RegionCanadaOntarioFortWilliamFn, RegionCanadaQuebec, RegionCanadaQuebecKahnawakeFn, RegionCanadaAtlantic, RegionCanadaAtlanticMembertouFn, RegionCanadaNorth, RegionCanadaNorthYukon, RegionCanadaNorthNwt, RegionCanadaNorthNunavut, RegionCanadaNorthKluaneFn,
 }
 
 func IsValidRegion(s string) bool {
 	for _, r := range AllRegions {
-		if string(r) == s { return true }
+		if string(r) == s {
+			return true
+		}
 	}
 	return false
 }

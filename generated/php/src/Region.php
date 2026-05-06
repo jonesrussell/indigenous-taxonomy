@@ -10,18 +10,33 @@ enum Region: string
 {
     case Canada = 'canada';
     case CanadaBritishColumbia = 'canada:british-columbia';
+    case CanadaBritishColumbiaVancouver = 'canada:british-columbia:vancouver';
+    case CanadaBritishColumbiaMusqueamFn = 'canada:british-columbia:musqueam-fn';
     case CanadaAlberta = 'canada:alberta';
+    case CanadaAlbertaCalgary = 'canada:alberta:calgary';
+    case CanadaAlbertaSiksikaFn = 'canada:alberta:siksika-fn';
     case CanadaSaskatchewan = 'canada:saskatchewan';
+    case CanadaSaskatchewanSaskatoon = 'canada:saskatchewan:saskatoon';
+    case CanadaSaskatchewanBeardyOkimasisFn = 'canada:saskatchewan:beardy-okimasis-fn';
     case CanadaManitoba = 'canada:manitoba';
     case CanadaManitobaSouthern = 'canada:manitoba:southern';
+    case CanadaManitobaWinnipeg = 'canada:manitoba:winnipeg';
+    case CanadaManitobaSagkeengFn = 'canada:manitoba:sagkeeng-fn';
     case CanadaOntario = 'canada:ontario';
     case CanadaOntarioNorthern = 'canada:ontario:northern';
     case CanadaOntarioNorthShoreHuron = 'canada:ontario:north-shore-huron';
     case CanadaOntarioSouthern = 'canada:ontario:southern';
+    case CanadaOntarioToronto = 'canada:ontario:toronto';
+    case CanadaOntarioOttawa = 'canada:ontario:ottawa';
+    case CanadaOntarioMississaugasOfTheCreditFn = 'canada:ontario:mississaugas-of-the-credit-fn';
+    case CanadaOntarioFortWilliamFn = 'canada:ontario:fort-william-fn';
     case CanadaQuebec = 'canada:quebec';
+    case CanadaQuebecKahnawakeFn = 'canada:quebec:kahnawake-fn';
     case CanadaAtlantic = 'canada:atlantic';
+    case CanadaAtlanticMembertouFn = 'canada:atlantic:membertou-fn';
     case CanadaNorth = 'canada:north';
     case CanadaNorthYukon = 'canada:north:yukon';
     case CanadaNorthNwt = 'canada:north:nwt';
     case CanadaNorthNunavut = 'canada:north:nunavut';
+    case CanadaNorthKluaneFn = 'canada:north:kluane-fn';
 }

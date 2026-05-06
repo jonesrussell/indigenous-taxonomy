@@ -3,4 +3,4 @@
 package taxonomy
 
 const TaxonomyVersion = "1.0.0"
-const SchemaHash = "1c0bd129be4654b8"
+const SchemaHash = "fccd13564aa9b99a"
